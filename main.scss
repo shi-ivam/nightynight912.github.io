@@ -124,4 +124,12 @@ section.second{
   .main p {
     font-size: 1.5rem;
   }
+  .tags{
+          flex-direction: column !important;
+          justify-content: center;
+          .tag{
+                  margin: 0 !important;
+                  font-size: 1.8rem !important;
+          }
+  }
 }

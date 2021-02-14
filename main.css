@@ -136,5 +136,18 @@ section.second h3 {
   .main p {
     font-size: 1.5rem;
   }
+  .tags {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .tags .tag {
+    margin: 0 !important;
+    font-size: 1.8rem !important;
+  }
 }
 /*# sourceMappingURL=main.css.map */
