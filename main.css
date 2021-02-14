@@ -168,5 +168,8 @@ section.second h3 {
     -webkit-column-gap: 10px;
             column-gap: 10px;
   }
+  .second {
+    padding: 50px !important;
+  }
 }
 /*# sourceMappingURL=main.css.map */
