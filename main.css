@@ -76,8 +76,8 @@ a {
   color: white;
   border: 3px solid white;
   text-decoration: none;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
   overflow: hidden;
   position: relative;
   z-index: 0;
@@ -128,6 +128,16 @@ section.second h3 {
 }
 
 @media only screen and (max-width: 800px) {
+  .main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 100vw;
+  }
   .main h2 {
     font-size: 5rem;
     text-align: center;
@@ -146,8 +156,17 @@ section.second h3 {
             justify-content: center;
   }
   .tags .tag {
+    float: left;
     margin: 0 !important;
     font-size: 1.8rem !important;
+  }
+  .btns {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 10px;
+            column-gap: 10px;
   }
 }
 /*# sourceMappingURL=main.css.map */
