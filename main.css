@@ -24,11 +24,16 @@ video {
   bottom: 0;
   min-height: 100%;
   min-width: 100%;
+  mix-blend-mode: screen;
+  z-index: 8;
+  -webkit-filter: hue-rotate(-20deg) saturate(150%) brightness(95%);
+          filter: hue-rotate(-20deg) saturate(150%) brightness(95%);
 }
 
 .main {
   position: absolute;
-  z-index: 100;
+  mix-blend-mode: overlay;
+  z-index: 9;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -36,8 +41,6 @@ video {
   color: white;
   text-align: center;
   font-size: 4rem;
-  opacity: 1;
-  mix-blend-mode: overlay;
   width: auto;
   max-width: 100%;
   height: auto;
@@ -66,18 +69,17 @@ video {
 .main .tags .tag {
   margin-right: 20px;
   font-size: 2rem;
-  color: white;
 }
 
 .main .tags .tag:last-child {
   margin-right: 0;
 }
 
-a {
+.main a {
   font-size: 1.4rem;
   padding: 10px 20px;
   background: transparent;
-  color: white;
+  color: inherit;
   border: 3px solid white;
   text-decoration: none;
   -webkit-transform: translateY(50%);
@@ -89,7 +91,7 @@ a {
   transition: 0.4s ease-in-out;
 }
 
-a::after {
+.main a::after {
   content: '';
   position: absolute;
   top: 0;
@@ -102,11 +104,11 @@ a::after {
   z-index: -1;
 }
 
-a:hover {
+.main a:hover {
   color: rebeccapurple;
 }
 
-a:hover::after {
+.main a:hover::after {
   width: 100%;
 }
 
@@ -180,26 +182,28 @@ section.second .projects .project .proj .btns {
   row-gap: 10px;
 }
 
-section.second .projects .project .proj .btns button.primary {
+section.second .projects .project .proj .btns a.primary {
   background: #a581ec;
   border: 2px solid transparent;
   color: white;
 }
 
-section.second .projects .project .proj .btns button.secondary {
+section.second .projects .project .proj .btns a.secondary {
   background: white;
   color: #646464;
   border: 1px solid #c4c4c4;
 }
 
-section.second .projects .project .proj .btns button {
+section.second .projects .project .proj .btns a {
   padding: 7px 10px;
   font-size: 1.1rem;
+  text-align: center;
+  text-decoration: none;
   -webkit-transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
-section.second .projects .project .proj .btns button:hover {
+section.second .projects .project .proj .btns a:hover {
   -webkit-transform: translateY(-3px);
           transform: translateY(-3px);
   -webkit-box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
@@ -335,6 +339,9 @@ section.fourth .contact .con:hover {
   .contact {
     -ms-grid-columns: 1fr 1fr !important;
         grid-template-columns: 1fr 1fr !important;
+  }
+  section.fourth {
+    padding: 50px !important;
   }
 }
 /*# sourceMappingURL=main.css.map */
