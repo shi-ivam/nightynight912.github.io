@@ -154,6 +154,29 @@ section.second .projects .project .proj {
   -webkit-box-shadow: 0 -2px 30px rgba(0, 0, 0, 0.07);
           box-shadow: 0 -2px 30px rgba(0, 0, 0, 0.07);
   border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section.second .projects .project .proj .inf {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 section.second .projects .project .proj .info {
@@ -161,14 +184,15 @@ section.second .projects .project .proj .info {
 }
 
 section.second .projects .project .proj .info h3 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   text-align: left;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-weight: 200;
 }
 
 section.second .projects .project .proj .info p {
   font-size: 0.9rem;
+  color: #3a3a3a;
 }
 
 section.second .projects .project .proj .btns {
