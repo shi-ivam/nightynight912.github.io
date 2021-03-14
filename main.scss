@@ -26,18 +26,18 @@ video {
   min-width: 100%;
   mix-blend-mode: screen;
   z-index: 8;
-  filter: hue-rotate(-20deg) saturate(150%) brightness(95%);
+  filter: hue-rotate(-20deg) saturate(150%) brightness(60%);
 }
 
 .main {
   position: absolute;
-  mix-blend-mode: overlay;
+//   mix-blend-mode: overlay;
   z-index: 9;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  color: white;
+  color: rgba(0, 0, 0, 0.753);
   text-align: center;
   font-size: 4rem;
   width: auto;
@@ -72,7 +72,7 @@ video {
         padding:10px 20px;      
         background:transparent;
         color:inherit;
-        border:3px solid white;
+        border:3px solid rgba(0, 0, 0, 0.753);;
         text-decoration: none;
         transform: translateY(50%);
         overflow: hidden;
@@ -84,14 +84,14 @@ video {
                 position: absolute;
                 top: 0;
                 left: 0;
-                background: white;
+                background: rgba(0, 0, 0, 0.753);
                 transition: 0.5s ease-in-out;
                 height: 100%;
                 width: 0px;
                 z-index: -1;
         }
         &:hover{
-                color: rebeccapurple;
+                color: white;
                 &::after{
                         width: 100%;
                 }
